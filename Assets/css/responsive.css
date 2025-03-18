@@ -26,6 +26,16 @@
     }
 }
 
+@media (max-width: 700px) {
+    .upload-icon {
+        display: none;
+    }
+
+    .youtube-apps-icon {
+        display: none;
+    }
+}
+
 /* extra CSS for mobile */
 @media (max-width: 500px) {
 

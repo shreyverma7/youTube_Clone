@@ -33,6 +33,7 @@
                 src="Assets/icons/hamburger-menu.svg"
                 alt=""
                 class="hamburger-menu"
+                id="hamburgerMenu"
         />
         <img
                 src="Assets/icons/youtube-logo.svg"
@@ -42,8 +43,8 @@
         />
     </div>
     <div class="middle-section">
-        <input class="search-bar" type="text" placeholder="Search"/>
-        <button class="search-button" data-title="Search">
+        <input id="searchBar" class="search-bar" type="text" placeholder="Search"/>
+        <button  id="searchButton" class="search-button" data-title="Search">
             <img
                     src="Assets/icons/search.svg"
                     alt=""
@@ -93,7 +94,7 @@
 
 <main>
     <!-- sidebar -->
-    <section class="sidebar">
+    <section  id="sidebar" class="sidebar">
         <div class="sidebar-link">
             <img src="Assets/icons/home.svg" alt="">
             <div>Home</div>
@@ -464,56 +465,21 @@
             </div>
         </div>
     </section>
-    <!-- <section class="footer">
-        <div class="footer-row">
-          <div class="footer-col">
-            <h4>Info</h4>
-            <ul class="links">
-              <li><a href="#">About Us</a></li>
-              <li><a href="#">Compressions</a></li>
-              <li><a href="#">Customers</a></li>
-              <li><a href="#">Service</a></li>
-              <li><a href="#">Collection</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Explore</h4>
-            <ul class="links">
-              <li><a href="#">Free Designs</a></li>
-              <li><a href="#">Latest Designs</a></li>
-              <li><a href="#">Themes</a></li>
-              <li><a href="#">Popular Designs</a></li>
-              <li><a href="#">Art Skills</a></li>
-              <li><a href="#">New Uploads</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Legal</h4>
-            <ul class="links">
-              <li><a href="#">Customer Agreement</a></li>
-              <li><a href="#">Privacy Policy</a></li>
-              <li><a href="#">GDPR</a></li>
-              <li><a href="#">Security</a></li>
-              <li><a href="#">Testimonials</a></li>
-              <li><a href="#">Media Kit</a></li>
-            </ul>
-          </div>
-          <div class="footer-col">
-            <h4>Newsletter</h4>
-            <p>
-              Subscribe to our newsletter for a weekly dose
-              of news, updates, helpful tips, and
-              exclusive offers.
-            </p>
-            <form action="#">
-              <input type="text" placeholder="Your email" required>
-              <button type="submit">SUBSCRIBE</button>
-            </form>
-          </div>
-        </div>
-      </section> -->
 </main>
 
+<script>
+      document.getElementById("hamburgerMenu").addEventListener("click", function () {
+        let sidebar = document.getElementById("sidebar");
+        sidebar.classList.toggle("open"); // Toggle open/close state
+    });
+    document.getElementById("searchButton").addEventListener("click", function () {
+        let searchInput = document.getElementById("searchBar");
+        let searchValue = searchInput.value;
+
+        console.log("Search Input:", searchValue); 
+        searchInput.value = ""; 
+    });
+</script>
 
 </body>
 </html>

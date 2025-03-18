@@ -1,6 +1,8 @@
 .sidebar {
     position: fixed;
-    left: 0;
+    /* left: 0; */
+    left: -250px; 
+    transition: left 0.3s ease-in-out;
     top: 55px;
     bottom: 0;
     background-color: white;
@@ -31,4 +33,7 @@
 .sidebar-link div {
     font-family: Roboto, Arial, serif;
     font-size: 10px;
+}
+.sidebar.open {
+    left: 0; 
 }
